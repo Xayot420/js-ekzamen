@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matematik Hisoblash</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="calculator">
+        <div id="messageContainer">
+            <p id="message">1-raqamni kiriting:</p>
+        </div>
+        <div id="inputs">
+            <label for="firstNumber">1-raqamni kiriting:</label>
+            <input type="number" id="firstNumber">
+            <div id="operationSelection" style="display:none;">
+                <label>Tanlang:</label>
+                <select id="operation">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+            </div>
+            <div id="secondNumberSection" style="display:none;">
+                <label for="secondNumber">2-raqamni kiriting:</label>
+                <input type="number" id="secondNumber">
+            </div>
+        </div>
+        <div id="result" style="display:none;">
+            <div id="frame">
+                <div id="leftSide"></div>
+                <div id="operator"></div>
+                <div id="rightSide"></div>
+            </div>
+            <button id="checkBtn" class="green" onclick="checkResult()">Check</button>
+            <button id="resetBtn" onclick="reset()">Reset</button>
+            <div id="finalResult" style="display:none;">
+                <h3>Natija: <span id="answer"></span></h3>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
